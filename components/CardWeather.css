@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgba(223, 246, 255, 0.5);
+    background-color: rgba(223, 246, 255, 0.6);
     border-radius: 1rem;
     border: #041C32 0.2rem solid;
     transition: all 0.4s ease-in;
@@ -107,9 +107,11 @@
     font-weight: 600;
     cursor: pointer;
     background-color: white;
+    transition: all 0.2s ease-in;
 }
 
 .btn:hover {
-    background-color: #DFF6FF;
+    background-color: #ccf1ff;
+    border: 1px solid #041C32;
 }
 

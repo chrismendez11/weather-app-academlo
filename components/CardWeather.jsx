@@ -13,25 +13,23 @@ const CardWeather = ({ lat, lon }) => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        if (lat) {
-            const ApiKey = '9eca67c68b792eff7b5f590fa7078584'
-            const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${ApiKey}`
-
-            axios.get(URL)
-                .then(res => {
-                    setWeather(res.data)
-                    const temp = {
-                        celsius: `${Math.round(res.data.main.temp - 273.15)} °C`,
-                        farenheir: `${Math.round(res.data.main.temp - 273.15) * 9 / 5 + 32} °F`
-                    }
-                    setTemperature(temp)
-                    setLoading(false)
-                })
-                .catch(err => console.log(err))
-        }
+            if (lat) {
+                const ApiKey = '9eca67c68b792eff7b5f590fa7078584'
+                const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${ApiKey}`
+    
+                axios.get(URL)
+                    .then(res => {
+                        setWeather(res.data)
+                        const temp = {
+                            celsius: `${Math.round(res.data.main.temp - 273.15)} °C`,
+                            farenheir: `${Math.round(res.data.main.temp - 273.15) * 9 / 5 + 32} °F`
+                        }
+                        setTemperature(temp)
+                        setLoading(false)
+                    })
+                    .catch(err => console.log(err))
+            }
     }, [lat, lon])
-
-    console.log(weather)
 
     const handleClick = () => setIsCelsius(!isCelsius)
 
