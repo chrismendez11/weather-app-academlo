@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.forecast-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    font-family: 'Nunito', sans-serif;
+}
+
+.card-forecast {
+    width: 375px;
+    height: 200px;
+    border-radius: 20px;
+    background: rgba(255, 242, 242, 0.8);
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid #041C32;
+    transition: 0.5s ease-out;
+    overflow: visible;
+    display: flex;
+}
+
+.card-forecast .for-card {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-forecast .for-card img {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+}
+
+/*Hover*/
+.card-forecast:hover {
+    border-color: #1363DF;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card-forecast:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+}
+
+.card-forecast .for-card h3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.card-forecast .forecast-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-forecast .forecast-card-info h3 {
+    font-size: 24px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.card-forecast .forecast-card-info p {
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.card-forecast .forecast-card-info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card-forecast .forecast-card-info ul li {
+    font-size: 14px;
+}

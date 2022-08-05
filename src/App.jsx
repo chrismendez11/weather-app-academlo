@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
 import CardWeather from '../components/CardWeather'
+import Forecast from '../components/Forecast'
 
 function App() {
 

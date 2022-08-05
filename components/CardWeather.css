@@ -9,6 +9,11 @@
     width: 100%;
     height: 100vh;
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
 }
 
 .Clear {background-image: url('../src/assets/img/sunny.jpg');}
@@ -17,8 +22,6 @@
 .Snow {background-image: url('../src/assets/img/');}
 
 .card {
-    margin: 0 auto;
-    margin-top: 20vh;
     min-width: 250px;
     max-width: 500px;
     height: 550px;

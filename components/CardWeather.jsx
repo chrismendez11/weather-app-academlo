@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Loading from './Loading'
 import './CardWeather.css'
+import Forecast from './Forecast'
 
 const CardWeather = ({ lat, lon }) => {
 
@@ -54,7 +55,7 @@ const CardWeather = ({ lat, lon }) => {
                     </div>
                 </div>
                 <button className='btn' onClick={handleClick}>{isCelsius ? 'Change to °F' : 'Change to °C'}</button>
-            </article></div>}
+            </article> <Forecast lon={lon} lat ={lat} isCelsius={isCelsius}/> </div>}
         </>
     )
 }
